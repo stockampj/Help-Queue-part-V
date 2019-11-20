@@ -43,8 +43,8 @@
             "single"
         ],
         "semi": [
-            "error",
-            "never"
+            "warn",
+            "always"
         ]
     }
 }
