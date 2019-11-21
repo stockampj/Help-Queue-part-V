@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Ticket(props) {
+  console.log(props.currentRouterPath);
   const ticketInformation =
     <div>
       <style global jsx>{`
@@ -15,7 +16,7 @@ function Ticket(props) {
     </div>;
   if (props.currentRouterPath === '/admin') {
     return (
-      <div onClick={() => {props.onTicketSelection(props.ticketId); }}>
+      <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
         {ticketInformation}
       </div>
     );
@@ -36,7 +37,8 @@ Ticket.propTypes = {
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   onTicketSelection: PropTypes.func,
-  ticketId: PropTypes.string.isRequired
+  ticketId: PropTypes.string.isRequired,
+  key: PropTypes.string
 };
 
 export default Ticket;

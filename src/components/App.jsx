@@ -24,6 +24,7 @@ class App extends React.Component {
   }
 
   handleAddingNewTicketToList(newTicket) {
+
     var newMasterTicketList = Object.assign({}, this.state.masterTicketList, {
       [newTicket.id]: newTicket
     });
